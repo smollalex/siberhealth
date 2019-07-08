@@ -304,14 +304,13 @@ footer {
     color: #fff;
   }
 
-  img {
-    margin-bottom: 30px;
-  }
+  
   
   h3 {
     font-size: 24px;
     margin-left: 30px;
     margin-bottom: 5px;
+    margin-top: 30px;
     color: #fff;
   }
 
@@ -340,6 +339,7 @@ footer {
 
   address {
     color: #fff;
+    
   }
 
   .footer {
@@ -349,6 +349,12 @@ footer {
 
       .item {
         margin-bottom: 40px;
+        
+
+        
+        img {
+          margin-right: 10px;
+        }
       }
     }
 
@@ -367,12 +373,13 @@ footer {
 
       address {
         margin-bottom: 0;
-      }
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-      svg {
-        width: 20px;
-        fill: #fff;
-        margin-right: 9px;
+        img {
+          margin-right: 9px;
+        }
       }
     }
   }
