@@ -8240,13 +8240,13 @@ section {
       .approach .item {
         flex-direction: column;
         padding: 0 15px; } }
-    .approach .item svg {
+    .approach .item img {
       width: 80px;
       height: 80px;
       min-width: 80px;
       margin-right: 40px; }
       @media (max-width: 575.98px) {
-        .approach .item svg {
+        .approach .item img {
           width: 60px;
           height: 60px;
           min-width: 60px;
