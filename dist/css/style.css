@@ -11670,12 +11670,15 @@ section {
   margin-bottom: 10px; }
 
 .btn {
-  background-color: #bfc8cf;
+  background-color: #151413;
   border: none;
   padding: 10px 30px;
   font-size: 24px;
   color: #fff;
-  border-radius: 0; }
+  border-radius: 0;
+  transition: 0.5s; }
+  .btn:hover, .btn:focus {
+    background-color: #bfc8cf; }
 
 .whoweare {
   display: flex;
@@ -11723,7 +11726,10 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f1f1f1; }
+  background-color: #f1f1f1;
+  background-image: url("../img/howwedoit.jpg");
+  background-size: cover;
+  background-attachment: fixed; }
   .howwedoit .container {
     display: flex;
     flex-direction: column;
@@ -11734,9 +11740,8 @@ section {
     margin: 0 0 50px 0; }
 
 .materials {
-  background-image: url(../img/materials.jpg);
-  background-position: center right;
-  background-repeat: no-repeat;
+  background-image: url(../img/allnatural.jpg);
+  background-size: cover;
   background-attachment: fixed; }
   @media (max-width: 575.98px) {
     .materials {

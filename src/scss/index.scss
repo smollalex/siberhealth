@@ -420,12 +420,16 @@ section {
 }
 
 .btn {
-  background-color: #bfc8cf;
+  background-color: #151413;;
   border: none;
   padding: 10px 30px;
   font-size: 24px;
   color: #fff;
   border-radius: 0;
+  transition: 0.5s;
+  &:hover, &:focus {
+    background-color: #bfc8cf;
+  }
 }
 
 .whoweare {
@@ -485,6 +489,9 @@ section {
   align-items: center;
   justify-content: center;
   background-color: #f1f1f1;
+  background-image: url('../img/howwedoit.jpg');
+  background-size: cover;
+  background-attachment: fixed;
 
   .container {
     display: flex;
@@ -500,9 +507,8 @@ section {
 }
 
 .materials {
-  background-image: url(../img/materials.jpg);
-  background-position: center right;
-  background-repeat: no-repeat;
+  background-image: url(../img/allnatural.jpg);
+  background-size: cover;
   background-attachment: fixed;
   
   @include media-breakpoint-down(xs) {
