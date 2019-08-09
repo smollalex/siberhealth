@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap" rel="stylesheet">
     <link href="https://siberhealth.com/wp-includes/css/dist/block-library/style.min.css?ver=5.2.2" rel="stylesheet">
     <link href="https://siberhealth.com/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=2.5.16" rel="stylesheet">
+    <script src="js/video.min.js"></script>
+    <script src="js/Youtube.min.js"></script>
   <link href="css/style.css" rel="stylesheet"></head>
   <body>
     <section class="top">
@@ -38,7 +40,8 @@
         <h2>REJUVENATE<span>your profits</span></h2><span class="plus">+  </span>
         <h2>REVITALIZE<span>your business</span></h2>
       </div>
-      <button class="btn-playvideo" type="button">play video</button>
+      <button class="btn-playvideo" type="button" onclick="videojs('vid1').play()">play video</button>
+      <video class="video-js vjs-default-skin" id="vid1" controls poster="./img/hero_new.jpg" data-setup="{ &quot;techOrder&quot;: [&quot;youtube&quot;], &quot;sources&quot;: [{ &quot;type&quot;: &quot;video/youtube&quot;, &quot;src&quot;: &quot;https://www.youtube.com/embed/LnxO39YTAYE&quot;}] }"></video>
     </header>
     <main>
       <section class="whoweare" id="whoweare">

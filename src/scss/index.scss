@@ -1,40 +1,45 @@
 // Vendor
-@import '~bootstrap/scss/bootstrap';
-@import '~animate.css/animate.css';
-@import '~hamburgers/_sass/hamburgers/hamburgers';
-
-@import 'hamburger';
+@import "~bootstrap/scss/bootstrap";
+@import "~animate.css/animate.css";
+@import "~hamburgers/_sass/hamburgers/hamburgers";
+@import "~video.js/dist/video-js.min.css";
+@import "hamburger";
 
 @font-face {
-	font-family: 'NeuzeGroT Regular';
-	src: url('../fonts/NeuzeGroTReg.eot');
-	src: local('☺'), url('../fonts/NeuzeGroTReg.woff') format('woff'), url('../fonts/NeuzeGroTReg.ttf') format('truetype'), url('./fonts/NeuzeGroTReg.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
+  font-family: "NeuzeGroT Regular";
+  src: url("../fonts/NeuzeGroTReg.eot");
+  src: local("☺"), url("../fonts/NeuzeGroTReg.woff") format("woff"),
+    url("../fonts/NeuzeGroTReg.ttf") format("truetype"),
+    url("./fonts/NeuzeGroTReg.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
-	font-family: 'NeuzeGroT Light';
-	src: url('../fonts/NeuzeGroTLig.eot');
-	src: local('☺'), url('../fonts/NeuzeGroTLig.woff') format('woff'), url('../fonts/NeuzeGroTLig.ttf') format('truetype'), url('../fonts/NeuzeGroTLig.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
+  font-family: "NeuzeGroT Light";
+  src: url("../fonts/NeuzeGroTLig.eot");
+  src: local("☺"), url("../fonts/NeuzeGroTLig.woff") format("woff"),
+    url("../fonts/NeuzeGroTLig.ttf") format("truetype"),
+    url("../fonts/NeuzeGroTLig.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
-	font-family: 'NeuzeGroT Bold';
-	src: url('../fonts/NeuzeGroTBol.eot');
-	src: local('☺'), url('../fonts/NeuzeGroTBol.woff') format('woff'), url('../fonts/NeuzeGroTBol.ttf') format('truetype'), url('../fonts/NeuzeGroTBol.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
+  font-family: "NeuzeGroT Bold";
+  src: url("../fonts/NeuzeGroTBol.eot");
+  src: local("☺"), url("../fonts/NeuzeGroTBol.woff") format("woff"),
+    url("../fonts/NeuzeGroTBol.ttf") format("truetype"),
+    url("../fonts/NeuzeGroTBol.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
-$font-regular: 'NeuzeGroT Regular', sans-serif;
-$font-light: 'NeuzeGroT Light', sans-serif;
-$font-bold: 'NeuzeGroT Bold', sans-serif;
+$font-regular: "NeuzeGroT Regular", sans-serif;
+$font-light: "NeuzeGroT Light", sans-serif;
+$font-bold: "NeuzeGroT Bold", sans-serif;
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
-
 
 header {
   height: 850px;
@@ -88,7 +93,7 @@ header {
       font-size: 60px;
       font-family: $font-regular;
     }
-    
+
     @include media-breakpoint-down(xs) {
       font-size: 37px;
       line-height: 44px;
@@ -111,7 +116,22 @@ header {
     color: #fff;
     font-size: 24px;
     font-family: $font-bold;
+    cursor: pointer;
   }
+}
+
+.video-js {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 250px);
+  z-index: 1000;
+  top: 180px;
+}
+.vjs-paused {
+  opacity: 0;
+}
+.vjs-playing {
+  opacity: 1;
 }
 
 nav {
@@ -119,20 +139,20 @@ nav {
   width: 100%;
   padding: 1rem !important;
   margin-bottom: -130px;
-  
+
   @include media-breakpoint-down(xs) {
     margin-bottom: 0;
   }
 
   @include media-breakpoint-up(sm) {
     min-height: 130px;
-     padding: 0 !important;
+    padding: 0 !important;
   }
 
   &.bg-hero {
     background-color: #161413;
   }
-  
+
   h1 {
     margin-bottom: 0;
   }
@@ -164,7 +184,7 @@ nav {
       margin-top: 15px;
     }
   }
-  
+
   .nav-item {
     padding-right: 15px;
     padding-left: 15px;
@@ -181,12 +201,12 @@ nav {
     .nav-link {
       font-size: 18px;
       color: #fff;
-      letter-spacing: .5px;
+      letter-spacing: 0.5px;
       padding: 0 0 5px 0 !important;
       border-bottom: 2px solid transparent;
-      transition: .5s;
+      transition: 0.5s;
       font-family: $font-regular;
-      
+
       &:hover {
         color: #cceedd;
         border-color: #cceedd;
@@ -202,7 +222,6 @@ nav {
   }
 
   .navbar-collapse {
-
     @include media-breakpoint-up(lg) {
       width: calc(50% - 70px);
     }
@@ -210,9 +229,9 @@ nav {
     &-left {
       order: 1;
       justify-content: flex-start;
-      
+
       @include media-breakpoint-down(xs) {
-        order: 3
+        order: 3;
       }
     }
     &-right {
@@ -241,7 +260,7 @@ section {
     text-align: center;
 
     &:after {
-      content: '';
+      content: "";
       width: 100px;
       height: 5px;
       background-color: #000000;
@@ -265,7 +284,7 @@ section {
   justify-content: center;
 
   span {
-    display: block; 
+    display: block;
     margin: 0;
     text-align: center;
     font-family: $font-regular;
@@ -294,7 +313,7 @@ section {
 .approach {
   background-color: #f6f6f6;
   box-shadow: inset 0 50px 50px -50px rgba(0, 0, 0, 0.09);
-  
+
   .item {
     display: flex;
     margin-bottom: 40px;
@@ -328,19 +347,22 @@ section {
     }
 
     &--collaboration {
-      h3, svg {
+      h3,
+      svg {
         color: #557755;
         fill: #557755;
       }
     }
     &--solutions {
-      h3, svg {
+      h3,
+      svg {
         color: #998855;
-        fill: #998855
+        fill: #998855;
       }
     }
     &--flexibility {
-      h3, svg {
+      h3,
+      svg {
         color: #775555;
         fill: #775555;
       }
@@ -359,7 +381,7 @@ section {
 
 .services {
   border-bottom: 1px solid #e8e8e8;
-  
+
   h3 {
     font-family: $font-regular;
     margin: 0 0 30px 0;
@@ -420,14 +442,15 @@ section {
 }
 
 .btn {
-  background-color: #151413;;
+  background-color: #151413;
   border: none;
   padding: 10px 30px;
   font-size: 24px;
   color: #fff;
   border-radius: 0;
   transition: 0.5s;
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background-color: #bfc8cf;
   }
 }
@@ -464,8 +487,9 @@ section {
     }
   }
 
-  &:before, &:after {
-    content: '';
+  &:before,
+  &:after {
+    content: "";
     width: 50%;
     height: 100%;
     position: absolute;
@@ -489,7 +513,7 @@ section {
   align-items: center;
   justify-content: center;
   background-color: #f1f1f1;
-  background-image: url('../img/howwedoit.jpg');
+  background-image: url("../img/howwedoit.jpg");
   background-size: cover;
   background-attachment: fixed;
 
@@ -510,7 +534,7 @@ section {
   background-image: url(../img/allnatural.jpg);
   background-size: cover;
   background-attachment: fixed;
-  
+
   @include media-breakpoint-down(xs) {
     background: none;
   }
@@ -531,7 +555,7 @@ section {
       margin-bottom: 20px;
 
       &:before {
-        content: '';
+        content: "";
         background-image: url(../img/checked.svg);
         background-repeat: no-repeat;
         width: 25px;
@@ -555,8 +579,6 @@ footer {
     }
   }
 
-  
-  
   h3 {
     font-size: 24px;
     margin-left: 30px;
@@ -568,7 +590,7 @@ footer {
   h4 {
     font-size: 14px;
     text-transform: uppercase;
-    opacity: .5;
+    opacity: 0.5;
     margin-left: 30px;
     color: #fff;
   }
@@ -590,7 +612,6 @@ footer {
 
   address {
     color: #fff;
-    
   }
 
   .footer {
@@ -601,9 +622,7 @@ footer {
 
       .item {
         margin-bottom: 40px;
-        
 
-        
         img {
           margin-right: 10px;
         }

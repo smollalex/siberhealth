@@ -10,6 +10,8 @@ html(lang='ru')
     link(href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap", rel="stylesheet")
     link(href="https://siberhealth.com/wp-includes/css/dist/block-library/style.min.css?ver=5.2.2", rel="stylesheet")
     link(href="https://siberhealth.com/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=2.5.16", rel="stylesheet")
+    script(src="js/video.min.js")
+    script(src="js/Youtube.min.js")
   body
     section.top
       .container
@@ -42,7 +44,9 @@ html(lang='ru')
         span.plus +  
         h2 REVITALIZE
           span your business
-      button(type="button", class="btn-playvideo") play video
+      button(type="button", class="btn-playvideo"  onclick="videojs('vid1').play()") play video
+      video(id="vid1" class="video-js vjs-default-skin" controls poster='./img/hero_new.jpg' data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/embed/LnxO39YTAYE"}] }')
+
     main
       section.whoweare#whoweare
         .container

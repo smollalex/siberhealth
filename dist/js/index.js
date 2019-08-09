@@ -14558,18 +14558,18 @@ window.$ = window.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jqu
 __webpack_require__(/*! popper.js/dist/popper.min */ "./node_modules/popper.js/dist/popper.min.js");
 __webpack_require__(/*! bootstrap/dist/js/bootstrap.min */ "./node_modules/bootstrap/dist/js/bootstrap.min.js");
 
-$('.hamburger').on('click', function () {
-  $(this).toggleClass('is-active');
+$(".hamburger").on("click", function () {
+  $(this).toggleClass("is-active");
 });
 
-$(window).on('scroll', function () {
+$(window).on("scroll", function () {
   var scrolltop = $(window).scrollTop(),
-      heightofheader = $('header').height();
+      heightofheader = $("header").height();
 
   if (scrolltop > heightofheader - 130) {
-    $('nav').addClass('bg-hero');
+    $("nav").addClass("bg-hero");
   } else {
-    $('nav').removeClass('bg-hero');
+    $("nav").removeClass("bg-hero");
   }
 });
 
