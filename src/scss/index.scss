@@ -166,7 +166,6 @@ nav {
     }
     svg {
       width: 140px;
-      fill: #fff;
 
       @include media-breakpoint-down(xs) {
         width: 100px;
@@ -556,7 +555,7 @@ section {
 
       &:before {
         content: "";
-        background-image: url(../img/checked.svg);
+        background-image: url(../img/checked.png);
         background-repeat: no-repeat;
         width: 25px;
         min-width: 25px;

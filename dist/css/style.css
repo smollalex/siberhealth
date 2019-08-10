@@ -11491,8 +11491,7 @@ nav {
       nav .navbar-brand {
         order: 1; } }
     nav .navbar-brand svg {
-      width: 140px;
-      fill: #fff; }
+      width: 140px; }
       @media (max-width: 575.98px) {
         nav .navbar-brand svg {
           width: 100px; } }
@@ -11777,7 +11776,7 @@ section {
     margin-bottom: 20px; }
     .materials ol li:before {
       content: "";
-      background-image: url(../img/checked.svg);
+      background-image: url(../img/checked.png);
       background-repeat: no-repeat;
       width: 25px;
       min-width: 25px;
